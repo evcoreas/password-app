@@ -1,1 +1,58 @@
-//second page setup
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+	<link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+  </head>
+  <body>
+
+
+<!-- - Sign up & Login Buttons -->
+	<button class="btn btn-default" data-toggle="modal" data-target="#loginPopup">Login</button>
+
+	<!-- modal window -->
+	<div class="modal fade" id="loginPopup">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- header -->
+				<div class="modal-header">
+					<button type="button" class="btn close" data-dismiss="modal" <i class="fa fa-close">Close</button>
+					</div>
+					<!-- body(form) -->
+					<div class="modal-body">
+						<form action="/">	
+						<div class="form-content">
+						<input type="text" class="form-control" name="email" placeholder="Email">
+						</div>
+						<div class="form-content">
+						<input type="text" class="form-control" name="pwd" placeholder="Password">
+						</div>
+
+
+						<div class="checkbox">
+	    				<label><input type="checkbox"> Remember me</label>
+	  					</div>
+					
+
+			
+						<!-- button to submit -->
+						<div class="modal-footer">
+						<button class="btn">Submit</button>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
