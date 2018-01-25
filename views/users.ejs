@@ -6,9 +6,11 @@
 <body>
 	
 		<li>
-			<%= newUser.fname %> + " " + <%=newUser.lname%> + " " +
+			<% user.forEach(function(newUser){ %>
+			<%= newUser.fname %> <%=newUser.lname%>
 			<%=newUser.email %>
 		</li>
+	<% }) %>
 	 
 </body>
 </html>
