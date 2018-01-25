@@ -27,3 +27,21 @@ app.use('/', function(req, res){
 });
 
 
+// this is our homepage. 
+app.get('/', function(req, res) {
+	res.render('index.ejs')
+	// res.redirect('/signup')
+
+});
+
+//page number 2
+app.get( '/mainpage', function(req, res) {
+	res.render('mainpage.ejs')
+
+});
+
+//page number3
+app.get('/signup', function(req, res) {
+	res.render('signup.ejs')
+});
+
