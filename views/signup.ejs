@@ -1,1 +1,29 @@
-//third page setup
+<!-- third page setup -->
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="UTF-8">
+    <title>Sign-Up</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<form action="/newUser" method="post">
+	<h2>Sign-Up</h2>
+	<input type="text" name="firstName" placeholder="First Name">
+	<input type="text" name="lastName" placeholder="Last Name">
+	<input type="email" name="email" placeholder="E-mail">
+	
+	<p>Select a question to help recover password</p>
+	<select>
+		<option>What town did you grow up in?</option>
+		<option>What's the name of your oldest cousin?</option>
+		<option>What was the name of your first pet?</option>
+		<option>What street was your high school on?</option>
+		<option>Who did you go with to senior prom?</option>
+	</select>
+	<input type="submit" name="">
+</form>
+</body>
+</html>
