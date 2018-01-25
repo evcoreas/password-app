@@ -108,3 +108,31 @@ li {
 a {
 	color:#9D53FF;;
 }
+
+/*Signup ejs*/
+.sign-header {
+	color:white;
+
+
+
+}
+
+.sign-form {
+
+	position: relative;
+	top:80px;
+	text-align:center;
+	border: 2px solid #9D53FF;
+	padding:60px;
+	/*background-color:violet;*/
+	/*Inserts blur around the popup window*/
+	-webkit-box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
+	box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
+}
+
+/*Hides the password from users view*/
+input[type="password"]
+{
+  -webkit-text-security: disc;
+}

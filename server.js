@@ -18,7 +18,7 @@ app.use(session({secret:'anysecret',
 
 app.set('view engine', 'ejs');
 
-app.listen(8080);
+app.listen(8000);
 console.log("Sever running on port 8080");
 
 // app.use('/', function(req, res){
@@ -30,7 +30,6 @@ console.log("Sever running on port 8080");
 // this is our homepage. 
 app.get('/index', function(req, res) {
 	res.render('index.ejs')
-	res.redirect('/signup')
 
 });
 
