@@ -32,7 +32,7 @@
 					<div class="modal-body">
 						<h2>Password Information:</h2>
 
-						<form action="/">	
+						<form action="/newPassword" method="post">	<!-- when submitted, make a post request to the /newPassword route in server.js -->
 						<div class="form-content">
 						<input id="NOW" type="text" class="form-control" name="website" placeholder="Name of Website">
 						</div>
@@ -40,7 +40,7 @@
 						<input id="userInput" type="text" class="form-control" name="user" placeholder="Username">
 						</div>
 						<div class="form-content">
-						<input id="pwdInput" type="password" class="form-control" name="pwd" placeholder="Password">
+						<input id="pwdInput" type="password" class="form-control" name="password" placeholder="Password">
 						</div>
 					
 		
@@ -57,6 +57,12 @@
 		</div>
 	</div>
 
+	<% passwords.forEach(function(newPass){ %> <!-- references the password variable in server.ejs and for each it does the following -->
+	<h3><%=newPass.website%></h3>  <!-- heading for the password card  -->
+	<p>Username: <%=newPass.username%></p>   <!-- username for the password card -->
+	<p>Password: <%=newPass.password %></p>  <!-- password for the password card  -->
+	<% }) %>
+
 
 	<style>
 	body {
@@ -65,6 +71,7 @@
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	    position: relative;
+	    color: white;
 	}
 	</style>
 
