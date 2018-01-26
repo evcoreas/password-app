@@ -2,9 +2,6 @@
 
 About Vault Master
 ================== 
-
-Vault Master
-=============
 is an interactive app that allows the user to store their very own passwords.
  
 The idea of this app is to allow users to:
