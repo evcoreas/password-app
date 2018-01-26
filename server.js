@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
 var ejs = require('ejs');
+app.use(express.static('public'))
 var path = require('path');//native module in express that resolves paths
+
 var session = require('express-session');//this is authentication
 var morgan = require('morgan'); //middleware
 var bodyParser = require("body-parser")
@@ -20,8 +22,9 @@ app.use(bodyParser.urlencoded({ extended: true}));
 
 app.set('view engine', 'ejs');
 
-app.listen(8080);
+app.listen(8000);
 console.log("Sever running on port 8080");
+
 
 var userSchema = new mongoose.Schema({
 	fname: String,
@@ -37,6 +40,8 @@ app.use('/index', function(req, res){
 	res.send('Our new app');
 	console.log('req.session');
 });
+
+
 
 
 // this is our homepage. 

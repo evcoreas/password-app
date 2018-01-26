@@ -3,71 +3,66 @@
 <head>
 
 <title>Sign-Up</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- bootstrap properties -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- google fonts cdn -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
-    <!-- font awesome library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- stylesheet -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- bootstrap properties -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- google fonts cdn -->
+	<link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+	<!-- font awesome library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- stylesheet -->
 
-    <link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 
 </head>
 
 
 <body>
 
-    
+
 <style>
 body {
-     background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
+	 background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 </style>
 
 
 <form action="/newUser" method="post">
-    <div class="container">
-        <div class="sign-form">
-        <h2 class="sign-header">Sign Up Here!</h2>
-            <br>
-            <br>
-            <input type="text" name="firstName" placeholder="First Name">
-            <br>
-            <br>
-            <input type="text" name="lastName" placeholder="Last Name">
-            <br>
-            <br>
-            <input type="email" name="email" placeholder="E-mail">
-            <br>
-            <br>
-            <input type="password" name="pwd" placeholder="Password">
-            <div class="checkbox2">
+	<div class="container">
+		<div class="sign-form">
+		<h2 class="sign-header">Sign Up Here!</h2>
+			<br>
+			<br>
+			<input type="text" name="firstName" placeholder="First Name">
+			<br>
+			<br>
+			<input type="text" name="lastName" placeholder="Last Name">
+			<br>
+			<br>
+			<input type="email" name="email" placeholder="E-mail">
+			<br>
+			<br>
+			<input type="password" name="pwd" placeholder="Password">
+			<div class="checkbox2">
 
-              <br>
-            <button class="btn">Submit</button>
+	  		<br>
+			<button class="btn">Submit</button>
 
-        </div>
-    </div>
-    <!-- 
-    <p>Select a question to help recover password</p>
-    <select>
-        <option>What town did you grow up in?</option>
-        <option>What's the name of your oldest cousin?</option>
-        <option>What was the name of your first pet?</option>
-        <option>What street was your high school on?</option>
-        <option>Who did you go with to senior prom?</option>
-    </select> -->
-    <ul class="list-inline nav-links">
-      <li><a href="/index"><b>Home</b></a></li>
-      <li><a href="/mainpage" class="active"><b>Passwords</b></a></li>
-      <li><a href="/signup"><b>Sign Up</b></a></li>
-    </ul>
+		</div>
+	</div>
+	<ul class="list-inline nav-links">
+	  <li><a href="/index"><b>Home</b></a></li>
+	  <li><a href="/mainpage" class="active"><b>Passwords</b></a></li>
+	  <li><a href="/signup"><b>Sign Up</b></a></li>
+	</ul>
 
 </form>
 </body>
