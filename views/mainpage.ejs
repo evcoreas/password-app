@@ -14,17 +14,21 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body>
-    <ul class="list-inline nav-links">
+
+
+    <ul class="list-inline pwd-nav">
       <li><a href="/index"><b>Home</b></a></li>
       <li><a href="/mainpage" class="active"><b>Passwords</b></a></li>
       <li><a href="/signup"><b>Sign Up</b></a></li>
     </ul>
-        <button data-toggle="modal" data-target="#popupList" type="button" class="btn-default btn-lg">
+
+
+        <button data-toggle="modal" data-target="#popupList" type="button" class="btn btn-default btn-lg">
           <span class="glyphicon glyphicon-plus"></span>
         </button>
         <div class="modal fade" id="popupList">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content hero-image">
                 <!-- header -->
                 <div class="modal-header">
                     <div class="close-btn">
@@ -33,7 +37,7 @@
                 </div>
                     <!-- body(form) -->
                     <div class="modal-body">
-                        <h2>Password Information:</h2>
+                        <h2 class="pwd-title">Password Information:</h2>
                         <form action="/">   
                         <div class="form-content">
                         <input id="NOW" type="text" class="form-control" name="website" placeholder="Name of Website">
@@ -58,6 +62,7 @@
             </div>
         </div>
     </div>
+
     <style>
       body {
           background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");

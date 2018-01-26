@@ -10,7 +10,7 @@ button {
 }
 /*Modal form(Login button) content*/
 .btn{
-    background-color:#9D53FF;;
+    background-color:#9D53FF;
     border: 1px solid;
 }
 .form-content {
@@ -75,16 +75,18 @@ li {
     position:relative;
     top:130px;
     text-align:center;
+    color:black;
 }
 .nav-links a:link, a:hover, a:active {
     text-decoration: none;
     color:white;
     padding:10px;
     border: .5px solid;
+    background-color:#9D53FF;
     font-family:'Lato', sans-serif;;
 }
 a {
-    color:#9D53FF;;
+    color:black;
 }
 /*Signup ejs*/
 .sign-header {
@@ -101,4 +103,14 @@ a {
     -webkit-box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
     box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
+}
+
+/*Mainpage ejs styling*/
+
+.pwd-nav {
+    text-align:center;
+}
+
+.pwd-title {
+    color:white;
 }
