@@ -3,48 +3,60 @@ body, html {
     height: 100%;
     font-family: 'Lato', sans-serif;
 }
+
 /*Login & Signup buttons */
 button {
     border: 1px solid;
     margin:5px;
+
 }
+
 /*Modal form(Login button) content*/
+
 .btn{
-    background-color:#9D53FF;
+    background-color:#9D53FF;;
     border: 1px solid;
 }
 .form-content {
     padding:5px;
 }
+
 .checkbox {
     float:left;
     color:white;
 }
+
+
 .close-btn:hover {
     color:#9D53FF;
 }
 
 .modal-body {
+
 /*Inserts blur around the popup window*/
 -webkit-box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
 -moz-box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
 box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
+
 }
+
 /*Hero Image content*/
+
 .paragraph-text {
     font-size:15px;
 }
 .hero-text {
     text-align:center;
     color:white;
-    margin-top:250px;
+    margin-top:290px;
 }
-
 .hero-image {
     /* The image used */
  background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
+
     /* Set a specific height */
     height:100%;
+
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
@@ -56,43 +68,55 @@ box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
     background-color: #6B56EF;
     border: 1px solid #6B56EF;
     color:green;
+
 }*/
+
 /*changes font color of nav bar words*/
 /*.navbar-inverse .navbar-nav > li > a {
   color :white;
 }*/
+
 /*changes hover color of nav bar words*/
 /*.navbar-inverse .navbar-nav > li > a:hover {
   color :yellow;
 }
+
+
 li {
     border-right: 1px solid black;
 }*/
-/*Nav bar content*/
 
+/*Nav bar content*/
 
 .nav-links {
     position:relative;
     top:130px;
     text-align:center;
-    color:black;
+
 }
+
 .nav-links a:link, a:hover, a:active {
     text-decoration: none;
     color:white;
     padding:10px;
     border: .5px solid;
-    background-color:#9D53FF;
     font-family:'Lato', sans-serif;;
 }
+
 a {
-    color:black;
+    color:#9D53FF;;
 }
+
 /*Signup ejs*/
 .sign-header {
     color:white;
+
+
+
 }
+
 .sign-form {
+
     position: relative;
     top:80px;
     text-align:center;
@@ -105,12 +129,16 @@ a {
     box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
 }
 
-/*Mainpage ejs styling*/
-
-.pwd-nav {
-    text-align:center;
+.inner-text {
+    background-color: #A252FEFF;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
 }
 
-.pwd-title {
-    color:white;
+.passwordsClass {
+    background-color: #A252FEFF;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
 }
