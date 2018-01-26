@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 ##Vault Master
 
 **About Vault Master:**
+=======
+# Vault Master
+>>>>>>> ee978b2d718462abfca7725c159882d9572120ed
 
-**Vault Master** is an interactive app that allows the user to store their very own passwords.
+About Vault Master
+================== 
+is an interactive app that allows the user to store their very own passwords.
  
 The idea of this app is to allow users to:
 
@@ -16,7 +22,12 @@ page where they will store a password of their choosing.
 To store user passwords, we are using packages MongoDB and Mongoose in our server.js file. 
 
 
+<<<<<<< HEAD
 **Usage:**
+=======
+Usage
+======
+>>>>>>> ee978b2d718462abfca7725c159882d9572120ed
 
 To use this app, you would need to clone the repository and run server.js in your console. 
 Once it's up and running, you can head over to http://localhost:8080/index to login or sign up for an 

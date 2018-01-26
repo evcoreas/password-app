@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Sign-Up</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +14,25 @@
     <!-- font awesome library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- stylesheet -->
+
     <link rel="stylesheet" type="text/css" href="./style.css">
+
 </head>
+
+
 <body>
-    <ul class="list-inline nav-links">
-      <li><a href="/index"><b>Home</b></a></li>
-      <li><a href="/mainpage" class="active"><b>Passwords</b></a></li>
-      <li><a href="/signup"><b>Sign Up</b></a></li>
-    </ul>
+
+
+<style>
+body {
+     background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+</style>
+
 
 <form action="/newUser" method="post">
     <div class="container">
@@ -38,21 +50,19 @@
             <br>
             <br>
             <input type="password" name="pwd" placeholder="Password">
+            <div class="checkbox2">
+
             <br>
             <button class="btn">Submit</button>
+
         </div>
     </div>
+    <ul class="list-inline nav-links">
+      <li><a href="/index"><b>Home</b></a></li>
+      <li><a href="/mainpage"><b>Passwords</b></a></li>
+      <li><a href="/signup"><b>Sign Up</b></a></li>
+    </ul>
 
-    <style>
-        body {
-             background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-        }
-</style>
 </form>
 </body>
-
 </html>
