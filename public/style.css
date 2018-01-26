@@ -1,4 +1,3 @@
-
 body, html {
     height: 100%;
     font-family: 'Lato', sans-serif;
@@ -68,7 +67,6 @@ box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
     background-color: #6B56EF;
     border: 1px solid #6B56EF;
     color:green;
-
 }*/
 
 /*changes font color of nav bar words*/
@@ -80,20 +78,15 @@ box-shadow: 1px 4px 25px 3px rgba(0,0,0,0.75);
 /*.navbar-inverse .navbar-nav > li > a:hover {
   color :yellow;
 }
-
-
 li {
     border-right: 1px solid black;
 }*/
 
-<<<<<<< HEAD
-=======
 /*Nav bar content*/
 
->>>>>>> ee978b2d718462abfca7725c159882d9572120ed
 .nav-links {
-/*    position:relative;
-    top:130px;*/
+    position:relative;
+    top:130px;
     text-align:center;
 
 }
@@ -102,7 +95,6 @@ li {
     text-decoration: none;
     color:white;
     padding:10px;
-    /*background-color:pink;*/
     border: .5px solid;
     font-family:'Lato', sans-serif;;
 }
@@ -146,3 +138,4 @@ a {
     margin: 10px;
     padding: 20px;
 }
+
