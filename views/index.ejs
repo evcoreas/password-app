@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap properties -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- google fonts cdn -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+<!--     <nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+      <li class=""><a href="/index">Home</a></li>
+      <li><a href="/mainpage">Passwords</a></li>
+      <li><a href="/signup">Sign up</a></li>
+  </ul>
+  </div>
+</nav>
+ -->
+ <!-- Hero Image section -->
+    <div class="hero-image">
+    <div class="container-fluid">
+    <div class="hero-text">
+    <h2 class="header-text">Welcome to our Password Storage Center!</h2>
+    <p class="paragraph-text"> Please click below to sign up for an account to start storing your very own passwords.</p>
+    <p class="paragraph-text">If you already have an account with us, please login below. </p>
+    <!-- Sign up & Login Buttons -->
+    <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#loginPopup">Login</button>
+    <button id= "signup" type="button" class="btn btn-default btn-lg">Sign up</button>
+    <!-- modal window -->
+    <div class="modal fade" id="loginPopup">
+        <div class="modal-dialog">
+            <div class="modal-content hero-image">
+                <!-- header -->
+                <div class="modal-header">
+                    <div class="close-btn">
+                    <button type="button" class="btn btn close" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                    </div>
+                </div>
+                    <!-- body(form) -->
+                    <div class="modal-body">
+                        <h2>Login</h2>
+                        <form action="/">   
+                        <div class="form-content">
+                        <input id="indexEmail" type="text" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-content">
+                        <input id="indexPassword" type="password" class="form-control" name="pwd" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                        <label><input type="checkbox">Remember me</label>
+                        </div>
+                    
+            
+                        <!-- button to submit -->
+                        <div class="modal-footer">
+                            <div class="submit-btn">
+                            <button class="btn btn-block">Submit</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="main.js"></script>
+  </body>
+</html>
