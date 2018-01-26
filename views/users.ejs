@@ -1,15 +1,20 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
 	<title> New User</title>
 </head>
 <body>
 	
-		<li>
+		<ol>
 			<% user.forEach(function(newUser){ %>
-			<%= newUser.fname %> <%=newUser.lname%>
-			<%=newUser.email %>
-		</li>
+				<li>
+					<ul>
+						<li><%= newUser.fname %> </li>
+						<li><%=newUser.lname%> </li>
+						<li><%=newUser.email %></li>
+					</ul>
+			</li>
+		</ol>
 	<% }) %>
 	 
 </body>
