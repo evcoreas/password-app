@@ -5,12 +5,9 @@ var path = require('path');//native module in express that resolves paths
 var session = require('express-session');//this is authentication
 var morgan = require('morgan'); //middleware
 var bodyParser = require("body-parser")
-var mongoose = require("mongoose"); //to make mongo db work better
 
-
-//this connects mongoose to the mongo db database
-mongoose.connect("mongodb://localhost:27017/user_app");
-
+var mongoose = require("mongoose"); ////mongoose is telling node.js to connect with the mongodb database
+mongoose.connect("mongodb://localhost:27018/user_app");//port 2018 only on erika's mac
 
 
 app.use(morgan('dev')); //morgan logs to the console everytime a user send a request
@@ -37,7 +34,10 @@ var passwordSchema = new mongoose.Schema({
 	password: String,
 })
 
-var User = mongoose.model("User", userSchema); //complied it to a model
+var User = mongoose.model("User", userSchema); //mongoose is an object data mapper. complied it to a model
+//where the jave script is interacting with the database
+//where we take the schema and complies it into a model which returns an object that has  
+//a lot of the methods that we use to create or find data from the database
 var Password = mongoose.model("Password", passwordSchema);
 
 
@@ -68,6 +68,16 @@ app.get('/signup', function(req, res) {
 });
 
 app.post('/newUser', function(req,res){
+
+    User.create({
+        fname: req.body.firstName,
+        lname: req.body.lastName,
+        email: req.body.email
+    })
+    res.redirect('/users')
+});
+
+
 	User.create({
 		fname: req.body.firstName,
 		lname: req.body.lastName,
@@ -75,6 +85,7 @@ app.post('/newUser', function(req,res){
 	})
 
 })
+
 // app.get('/users', function(req,res){
 // 	//get the users from the data base
 // 	 var user = User.find({}, function(err, user){
@@ -83,6 +94,7 @@ app.post('/newUser', function(req,res){
 // 										 //user on the right is the varibale name in this file 
 // 		})
 // 	})
+
 app.post('/newPassword', function(req,res){
 	Password.create({
 		website: req.body.website,
@@ -90,4 +102,4 @@ app.post('/newPassword', function(req,res){
 		password: req.body.password
 	})
 	res.redirect('/mainpage')
-})
+});

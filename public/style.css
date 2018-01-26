@@ -134,6 +134,10 @@ a {
     padding: 20px;
 }
 
+.pwd-title {
+    color:white;
+}
+
 .passwordsClass {
     background-color: #9D53FF;
     text-align: center;
