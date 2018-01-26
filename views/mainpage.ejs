@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Bootstrap Example</title>
+  <title>Vault Master</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,39 +15,40 @@
 
   </head>
   <body>
+        <button data-toggle="modal" data-target="#popupList" type="button" class="btn-default btn-lg">
+          <span class="glyphicon glyphicon-plus"></span>
+        </button>
 
-
-<!-- - Sign up & Login Buttons -->
-	<button class="btn btn-default" data-toggle="modal" data-target="#loginPopup">Login</button>
-
-	<!-- modal window -->
-	<div class="modal fade" id="loginPopup">
+        <div class="modal fade" id="popupList">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<!-- header -->
 				<div class="modal-header">
-					<button type="button" class="btn close" data-dismiss="modal" <i class="fa fa-close">Close</button>
+					<div class="close-btn">
+					<button type="button" class="btn btn close" data-dismiss="modal"><i class="fa fa-close"></i></button>
 					</div>
+				</div>
 					<!-- body(form) -->
 					<div class="modal-body">
+						<h2>Password Information:</h2>
+
 						<form action="/">	
 						<div class="form-content">
-						<input type="text" class="form-control" name="email" placeholder="Email">
+						<input id="NOW" type="text" class="form-control" name="website" placeholder="Name of Website">
 						</div>
 						<div class="form-content">
-						<input type="text" class="form-control" name="pwd" placeholder="Password">
+						<input id="userInput" type="text" class="form-control" name="user" placeholder="Username">
 						</div>
-
-
-						<div class="checkbox">
-	    				<label><input type="checkbox"> Remember me</label>
-	  					</div>
+						<div class="form-content">
+						<input id="pwdInput" type="password" class="form-control" name="pwd" placeholder="Password">
+						</div>
 					
-
-			
+		
 						<!-- button to submit -->
 						<div class="modal-footer">
-						<button class="btn">Submit</button>
+							<div class="submit-btn">
+							<button class="btn btn-block">Submit</button>
+							</div>
 						</div>
 						</form>
 					</div>
@@ -56,3 +57,25 @@
 		</div>
 	</div>
 
+
+	<style>
+	body {
+		background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    position: relative;
+	}
+	</style>
+
+
+	<ul class="list-inline nav-links">
+	  <li><a href="/index"><b>Home</b></a></li>
+	  <li><a href="/mainpage" class="active"><b>Passwords</b></a></li>
+	  <li><a href="/signup"><b>Sign Up</b></a></li>
+	</ul>
+
+
+<script src="main.js"></script>
+ </body>
+</html>
