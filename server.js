@@ -23,7 +23,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.listen(8080);
-console.log("Sever running on port 8080");
+console.log("Server running on port 8080");
 
 var userSchema = new mongoose.Schema({
 	fname: String,
