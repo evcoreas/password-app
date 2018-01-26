@@ -21,13 +21,21 @@
 
 
 <body>
+
+
 <style>
 body {
 	 background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 </style>
-<form action="/" method="post">
+
+
+<form action="/newUser" method="post">
 	<div class="container">
 		<div class="sign-form">
 		<h2 class="sign-header">Sign Up Here!</h2>
@@ -43,21 +51,13 @@ body {
 			<br>
 			<br>
 			<input type="password" name="pwd" placeholder="Password">
-	  		<br>
+			<div class="checkbox2">
+
 	  		<br>
 			<button class="btn">Submit</button>
 
 		</div>
 	</div>
-	<!-- 
-	<p>Select a question to help recover password</p>
-	<select>
-		<option>What town did you grow up in?</option>
-		<option>What's the name of your oldest cousin?</option>
-		<option>What was the name of your first pet?</option>
-		<option>What street was your high school on?</option>
-		<option>Who did you go with to senior prom?</option>
-	</select> -->
 	<ul class="list-inline nav-links">
 	  <li><a href="/index"><b>Home</b></a></li>
 	  <li><a href="/mainpage" class="active"><b>Passwords</b></a></li>
