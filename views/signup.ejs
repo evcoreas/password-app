@@ -16,15 +16,12 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
-<style>
-body {
-     background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-</style>
+    <ul class="list-inline nav-links">
+      <li><a href="/index"><b>Home</b></a></li>
+      <li><a href="/mainpage" class="active"><b>Passwords</b></a></li>
+      <li><a href="/signup"><b>Sign Up</b></a></li>
+    </ul>
+
 <form action="/newUser" method="post">
     <div class="container">
         <div class="sign-form">
@@ -45,11 +42,17 @@ body {
             <button class="btn">Submit</button>
         </div>
     </div>
-    <ul class="list-inline nav-links">
-      <li><a href="/index"><b>Home</b></a></li>
-      <li><a href="/mainpage" class="active"><b>Passwords</b></a></li>
-      <li><a href="/signup"><b>Sign Up</b></a></li>
-    </ul>
+
+    <style>
+        body {
+             background-image: url("https://img00.deviantart.net/5a7a/i/2013/213/8/b/2560x1600_by_endosage-d6g6jvq.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+</style>
 </form>
 </body>
+
 </html>
