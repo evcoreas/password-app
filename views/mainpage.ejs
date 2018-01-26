@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+
   <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./style.css">
@@ -16,12 +16,12 @@
   </head>
   <body>
         <button data-toggle="modal" data-target="#popupList" type="button" class="btn-default btn-lg">
-          <span class="glyphicon glyphicon-plus"></span>
+          <span class="glyphicon plus-sign glyphicon-plus"></span>
         </button>
 
         <div class="modal fade" id="popupList">
-    <div class="modal-dialog">
-      <div class="modal-content hero-image">
+        <div class="modal-dialog">
+          <div class="modal-content hero-image">
                 <!-- header -->
                 <div class="modal-header">
                     <div class="close-btn">
@@ -29,8 +29,8 @@
                     </div>
                 </div>
                     <!-- body(form) -->
-                    <div class="modal-body">
-                        <h2>Password Information:</h2>
+             <div class="modal-body">
+             <h2>Password Information:</h2>
             <form action="/newPassword" method="post">  <!-- when submitted, make a post request to the /newPassword route in server.js -->
             <div class="form-content">
             <input id="NOW" type="text" class="form-control" name="website" placeholder="Name of Website">
@@ -55,9 +55,13 @@
       </div>
     </div>
   </div>
+  <!-- Modal Popups -->
+
+
   <div class="row text-center" style = "display: flex; flex-wrap:wrap; padding: 15px; margin: 10px;">
   <% passwords.forEach(function(newPass){ %> <!-- references the password variable in server.ejs and for each it does the following -->
-  <div class="passwordsClass">
+  <div id="pwdClass" class="passwordsClass">
+  <!-- <button id="closePwd" class="btn"><i class="fa fa-close"></i></button> -->
   <h3><%=newPass.website%></h3>  <!-- heading for the password card  -->
   <p>Username: <%=newPass.username%></p>   <!-- username for the password card -->
   <p>Password: <%=newPass.password %></p>  <!-- password for the password card  -->
