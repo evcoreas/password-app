@@ -1,12 +1,21 @@
 var express = require('express');
 var app = express();
 var ejs = require('ejs');
+<<<<<<< HEAD
 var path = require('path');//native module in express that resolves paths
+=======
+app.use(express.static('public'))
+var path = require('path');//native module in express that resolves paths
+
+>>>>>>> 2a703e16ffd56291a00497bb4576899dbd511645
 var session = require('express-session');//this is authentication
 var morgan = require('morgan'); //middleware
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose"); //to make mongo db work better
+<<<<<<< HEAD
 app.use(express.static("public"));
+=======
+>>>>>>> 2a703e16ffd56291a00497bb4576899dbd511645
 
 //this connects mongoose to the mongo db database
 mongoose.connect("mongodb://localhost:27017/user_app");
@@ -24,6 +33,10 @@ app.set('view engine', 'ejs');
 app.listen(8000);
 console.log("Sever running on port 8080");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a703e16ffd56291a00497bb4576899dbd511645
 var userSchema = new mongoose.Schema({
 	fname: String,
 	lname: String,
@@ -31,6 +44,18 @@ var userSchema = new mongoose.Schema({
 });
 
 var User = mongoose.model("User", userSchema); //complied it to a model
+<<<<<<< HEAD
+=======
+
+
+
+app.use('/index', function(req, res){
+	res.send('Our new app');
+	console.log('req.session');
+});
+
+
+>>>>>>> 2a703e16ffd56291a00497bb4576899dbd511645
 
 
 // this is our homepage. 
@@ -67,4 +92,8 @@ app.get('/users', function(req,res){
 										 //user on the right is the varibale name in this file 
 	});
 	
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2a703e16ffd56291a00497bb4576899dbd511645

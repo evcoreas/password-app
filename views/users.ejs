@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> New User</title>
+</head>
+<body>
+	
+		<li>
+			<% user.forEach(function(newUser){ %>
+			<%= newUser.fname %> <%=newUser.lname%>
+			<%=newUser.email %>
+		</li>
+	<% }) %>
+	 
+</body>
+</html>
