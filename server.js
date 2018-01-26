@@ -6,10 +6,8 @@ var session = require('express-session');//this is authentication
 var morgan = require('morgan'); //middleware
 
 var bodyParser = require("body-parser")
-var mongoose = require("mongoose"); //to make mongo db work better
-
-//this connects mongoose to the mongo db database
-mongoose.connect("mongodb://localhost:27017/user_app");
+var mongoose = require("mongoose"); ////mongoose is telling node.js to connect with the mongodb database
+mongoose.connect("mongodb://localhost:27017/user_app");//port 2018 only on erika's
 
 app.set('view engine', "ejs");
 app.use(express.static("public"));
@@ -25,8 +23,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.listen(8080);
+
 console.log("Sever running on port 8080");
 
+//schema is a plan for the certain variable
 var userSchema = new mongoose.Schema({
     fname: String,
     lname: String,
@@ -39,8 +39,11 @@ var passwordSchema = new mongoose.Schema({
 	password: String,
 })
 
-var User = mongoose.model("User", userSchema); //complied it to a model
-var Password = mongoose.model("Password", passwordSchema);8
+var User = mongoose.model("User", userSchema); //mongoose is an object data mapper. complied it to a model
+//where the jave script is interacting with the database
+//where we take the schema and complies it into a model which returns an object that has  
+//a lot of the methods that we use to create or find data from the database
+var Password = mongoose.model("Password", passwordSchema);
 
 
 // this is our homepage. 
@@ -62,6 +65,7 @@ app.get( '/mainpage', function(req, res) {
 app.get('/signup', function(req, res) {
     res.render('signup.ejs')
 });
+
 app.post('/newUser', function(req,res){
     User.create({
         fname: req.body.firstName,
@@ -70,7 +74,9 @@ app.post('/newUser', function(req,res){
     })
     res.redirect('/users')
 });
+
 app.get('/users', function(req,res){
+
 
 	//get the users from the data base
 	 var user = User.find({}, function(err, user){
@@ -88,3 +94,23 @@ app.post('/newPassword', function(req,res){
 	res.redirect('/mainpage')
 })
 
+
+
+
+
+
+
+
+
+
+
+// app.get("/passwords", function(req, res){
+//     //get all stored passwords from DB
+//     Password.find({}, function(err, allPasswords){
+//         if(err){
+//             console.log(err);
+//         } else {
+//             res.render("passwords", {passwords: allPasswords});
+//         }
+//     });
+// });
