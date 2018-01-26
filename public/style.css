@@ -14,7 +14,7 @@ button {
 /*Modal form(Login button) content*/
 
 .btn{
-    background-color:#9D53FF;;
+    background-color:#9D53FF;
     border: 1px solid;
 }
 .form-content {
@@ -104,14 +104,12 @@ li {
 }
 
 a {
-    color:#9D53FF;;
+    color:#9D53FF;
 }
 
 /*Signup ejs*/
 .sign-header {
     color:white;
-
-
 
 }
 
@@ -137,8 +135,16 @@ a {
 }
 
 .passwordsClass {
-    background-color: #A252FEFF;
+    background-color: #9D53FF;
     text-align: center;
     margin: 10px;
     padding: 20px;
+    border: 1px solid;
+}
+
+/*Mainpage*/
+
+
+.btn-default {
+background-color: #9D53FF;
 }
