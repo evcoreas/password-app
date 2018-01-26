@@ -6,7 +6,7 @@ var session = require('express-session');//this is authentication
 var morgan = require('morgan'); //middleware
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");//to make mongodb work better
-mongoose.connect("mongodb://localhost:27017/user_app");//port 2018 only on erika's
+mongoose.connect("mongodb://localhost:27018/user_app");//port 2018 only on erika's
 app.set('view engine', "ejs");
 app.use(express.static("public"));
 app.use(morgan('dev')); //morgan logs to the console everytime a user send a request
