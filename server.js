@@ -23,6 +23,7 @@ var userSchema = new mongoose.Schema({
     lname: String,
     email: String
 });
+
 var User = mongoose.model("User", userSchema); //complied it to a model
 // this is our homepage. 
 app.get('/index', function(req, res) {
