@@ -41,11 +41,16 @@
 		</div>
 	</div>
 
-	<% passwords.forEach(function(newPass){ %> <!-- references the password variable in server.ejs and for each it does the following -->
+	<div class="row text-center" style="display:flex; flex-wrap: wrap; padding:15px; margin:10px;">
+	<% passwords.forEach(function(newPass){ %> 
+	<!-- references the password variable in server.ejs and for each it does the following -->
+	<div class="passwordsClass">
 	<h3><%=newPass.website%></h3>  <!-- heading for the password card  -->
 	<p>Username: <%=newPass.username%></p>   <!-- username for the password card -->
 	<p>Password: <%=newPass.password %></p>  <!-- password for the password card  -->
+	</div>
 	<% }) %>
+	</div>
 
 
 	<style>

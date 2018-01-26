@@ -7,7 +7,7 @@ var morgan = require('morgan'); //middleware
 
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose"); ////mongoose is telling node.js to connect with the mongodb database
-mongoose.connect("mongodb://localhost:27017/user_app");//port 2018 only on erika's
+mongoose.connect("mongodb://localhost:27018/user_app");//port 2018 only on erika's
 
 app.set('view engine', "ejs");
 app.use(express.static("public"));
@@ -50,8 +50,8 @@ var Password = mongoose.model("Password", passwordSchema);
 app.get('/index', function(req, res) {
     res.render('index.ejs')
 });
-//page number 2
 
+//page number 2
 app.get( '/mainpage', function(req, res) { 
 	var passwords = Password.find({}, function(err, passwords){
 	//renders the user file 
@@ -76,15 +76,15 @@ app.post('/newUser', function(req,res){
 });
 
 app.get('/users', function(req,res){
-
-
 	//get the users from the data base
 	 var user = User.find({}, function(err, user){
 	//renders the user file 
-	res.render('users.ejs', {user: user}) //user on the left is the variable name in ejs file 
-										 //user on the right is the varibale name in this file 
+	res.render('users.ejs', {user: user}) 
+    //user on the left is the variable name in ejs file 
+	//user on the right is the varibale name in this file 
 		})
-	})
+	});
+
 app.post('/newPassword', function(req,res){
 	Password.create({
 		website: req.body.website,
@@ -92,7 +92,7 @@ app.post('/newPassword', function(req,res){
 		password: req.body.password
 	})
 	res.redirect('/mainpage')
-})
+});
 
 
 
