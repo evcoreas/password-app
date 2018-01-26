@@ -28,7 +28,8 @@ console.log("Sever running on port 8080");
 var userSchema = new mongoose.Schema({
 	fname: String,
 	lname: String,
-	email: String
+	email: String,
+	password: String
 });
 
 var passwordSchema = new mongoose.Schema({
@@ -71,7 +72,8 @@ app.post('/newUser', function(req,res){
 	User.create({
 		fname: req.body.firstName,
 		lname: req.body.lastName,
-		email: req.body.email
+		email: req.body.email,
+		password: req.body.pwd
 	})
 
 })
