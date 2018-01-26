@@ -5,7 +5,7 @@ var path = require('path');//native module in express that resolves paths
 var session = require('express-session');//this is authentication
 var morgan = require('morgan'); //middleware
 var bodyParser = require('body-parser');
-var mongoose = require("mongoose");//to make mongodb work better
+var mongoose = require("mongoose");//mongoose is telling node.js to connect with the mongodb database
 mongoose.connect("mongodb://localhost:27018/user_app");//port 2018 only on erika's
 app.set('view engine', "ejs");
 app.use(express.static("public"));
@@ -18,12 +18,20 @@ app.use(session({secret:'anysecret',
 app.listen(8080);
 console.log("SERVER IS LISTENING on 8080!");
 /////////////////////////////////////////////////////////////////////////////
+
+//schema is a plan for the certain variable
 var userSchema = new mongoose.Schema({
     fname: String,
     lname: String,
     email: String
 });
-var User = mongoose.model("User", userSchema); //complied it to a model
+
+var User = mongoose.model("User", userSchema); //mongoose is an object data mapper. complied it to a model
+//where the jave script is interacting with the database
+//where we take the schema and complies it into a model which returns an object that has  
+//a lot of the methods that we use to create or find data from the database
+
+
 // this is our homepage. 
 app.get('/index', function(req, res) {
     res.render('index.ejs')
@@ -36,6 +44,7 @@ app.get( '/mainpage', function(req, res) {
 app.get('/signup', function(req, res) {
     res.render('signup.ejs')
 });
+
 app.post('/newUser', function(req,res){
     User.create({
         fname: req.body.firstName,
@@ -44,6 +53,7 @@ app.post('/newUser', function(req,res){
     })
     res.redirect('/users')
 });
+
 app.get('/users', function(req,res){
     //get the users from the data base
      var user = User.find({}, function(err, user){
@@ -53,3 +63,32 @@ app.get('/users', function(req,res){
     });
     
 });
+
+
+
+
+
+
+
+
+
+
+// app.get("/passwords", function(req, res){
+//     //get all stored passwords from DB
+//     Password.find({}, function(err, allPasswords){
+//         if(err){
+//             console.log(err);
+//         } else {
+//             res.render("passwords", {passwords: allPasswords});
+//         }
+//     });
+// });
+
+
+
+
+
+
+
+
+
