@@ -15,7 +15,7 @@ page where they will store a password of their choosing.
 To store user passwords, we are using packages MongoDB and Mongoose in our server.js file. 
 
 
-Usage
+##Usage
 ======
 
 To use this app, you would need to clone the repository and run server.js in your console. 
@@ -24,7 +24,7 @@ account.
 
 Once you signup, your information will be added to the database and you can freely start using the passwords page to add your very own passwords. 
 
-Dependencies
+##Dependencies
 =============
 1. npm init
 2. npm init install --save express
