@@ -1,7 +1,6 @@
 # Vault Master
 
 ## About Vault Master
-================== 
 is an interactive app that allows the user to store their very own passwords.
  
 The idea of this app is to allow users to:
@@ -24,3 +23,12 @@ Once it's up and running, you can head over to http://localhost:8080/index to lo
 account. 
 
 Once you signup, your information will be added to the database and you can freely start using the passwords page to add your very own passwords. 
+
+Dependencies
+=============
+1. npm init
+2. npm init install --save express
+3. npm init install --save ejs
+4. npm init install --save mongoose
+5. npm init install --save body-parser
+6. npm init install --save morgan
