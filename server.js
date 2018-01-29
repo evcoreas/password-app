@@ -5,15 +5,15 @@ var path = require('path');//native module in express that resolves paths
 var session = require('express-session');//this is authentication
 var morgan = require('morgan'); //middleware
 var bodyParser = require("body-parser")
-var mongoose = require("mongoose"); //to make mongo db work better
+var mongoose = require("mongoose"); //mongoose is telling node.js to connect with the mongodb database
 
 
 //this connects mongoose to the mongo db database
-mongoose.connect("mongodb://localhost:27017/user_app");
+mongoose.connect("mongodb://localhost:27017/user_app");//27017 is a port configuration for mongodb. 
+//if port 27017 is not available use 27018
 
 
-
-app.use(morgan('dev')); //morgan logs to the console everytime a user send a request
+app.use(morgan('dev')); //morgan logs to the console everytime a user sends a request
 app.use(session({secret:'anysecret',
 				saveUninitialized: true,
 				resave: true}));
@@ -38,7 +38,10 @@ var passwordSchema = new mongoose.Schema({
 	password: String,
 })
 
-var User = mongoose.model("User", userSchema); //complied it to a model
+var User = mongoose.model("User", userSchema); //mongoose is an object data mapper
+//where the javascript is interacting with the database
+//where we take the schema and it complies it into a model, which returns an object that has  
+//a lot of the methods that we use to create or find data from the database
 var Password = mongoose.model("Password", passwordSchema);
 
 
